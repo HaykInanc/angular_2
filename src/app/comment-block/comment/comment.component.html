@@ -1,0 +1,10 @@
+<div class="comment">
+    <button (click)='delete()' >удалить</button>
+    <div class="content">
+        <img class="ava" [src]="ava" alt="">
+        <p>
+            {{text}}
+        </p>
+    </div>
+    <app-like [likeCnt]='likeCnt' [commentId]='commentId'></app-like>
+</div>

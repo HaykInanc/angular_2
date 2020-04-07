@@ -1,0 +1,12 @@
+<form action="" (submit)='submit($event)'>
+    <div class="field">
+        <label for="">картинка</label>
+        <input [(ngModel)]='imgFile' name='imgUrl' type="file">
+    </div>
+    <div class="field">
+        <label for="">текст</label>
+        <textarea [(ngModel)]='text' name='text'></textarea>
+    </div>
+    <button >добавить</button>
+</form>
+ 

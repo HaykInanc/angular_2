@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>{{post.title}}</h2>
+    <p> {{post.body}} </p>
+    <div class="btnContainer">
+        <button type="button" (click)='addLike()'>
+            {{post.likeCnt }}  лайков
+        </button>
+    </div>
+    <div class="comments">
+        <p *ngIf='post.comments.length' class="commentTitle">Коментарии: </p>
+        <div *ngFor = 'let comment of post.comments'>
+            <app-post-comment [comment]='comment'></app-post-comment>
+        </div>
+        <app-post-add-comment [id]='post.pk'></app-post-add-comment>
+    </div>
+</div>
